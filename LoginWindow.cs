@@ -6,6 +6,7 @@ namespace ConsoleTicetManager_ver_1._0
 	public class LoginWindow
 	{
 		public static string LoginUser=" ";
+		public static string LoginRole=" ";
 		public static void Login()
 		{
 			
@@ -22,8 +23,10 @@ namespace ConsoleTicetManager_ver_1._0
 			if(CheckUser!=null)
 			{
 				if(CheckUser.Password ==Paswd)
-				{ 
+				{
+					LoginRole = CheckUser.Role;
 					Program.StartApp();
+					
 				}
 				else
 				{
